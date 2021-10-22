@@ -31,7 +31,7 @@ that the user will be able to explore a procedurally generated grass and woodlan
 including the birds, mushrooms and random flora and fauna. I plan to take some 
 inspiration from the likes of the old school Pokemon games suchas Red, Gold, and 
 Ruby. As well as that I’ll also be drawing from Stardew Valleyand its woodland 
-parts of the town. Another game I similar to this feel would be Minecraft.The 
+parts of the town. Another game I similar to this feel would be Minecraft. The 
 project will be built using the Unity Game Engine. 
 
 ## This is how to markdown text:
