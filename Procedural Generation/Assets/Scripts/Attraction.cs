@@ -4,7 +4,7 @@ using System.Numerics;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
-public class Attration : MonoBehaviour
+public class Attraction : MonoBehaviour
 {
     public float radius = 5f;
     public float x_phase = 0.5f;
