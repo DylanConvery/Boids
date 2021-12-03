@@ -4,7 +4,7 @@ Name: Dylan Convery
 
 Student Number: D14124700
 
-Class Group: DT228
+Class Group: DT228/TU856
 
 # Description of the project
 
