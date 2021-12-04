@@ -43,7 +43,7 @@ Each indivdual agent is governed by three rules that determine their overall fli
 # Proposal
 The goal of this project is to create an interesting simulation using procedural
 generation. Birds flocking can be awe inspiring but also intimidating at times
-due to the sheer size the can grow to. 
+due to the sheer size they can grow to. 
 
 There are plenty of examples of flocking implemented in video games throughout
 the years from The Legend of Zelda, to Horizon Zero Dawn, to Uncharted. Bird
