@@ -8,29 +8,45 @@ Class Group: DT228/TU856
 
 # Description of the project
 
+This project will implemented a well known flocking simulation called Boids using the Unity Game 
+Engine and procedural generation. Boids or bird-oid objects, was first developed by Computer 
+Scientist Craig Reynolds in 1986. 
+
 # Instructions for use
 
+Steer the direction of the flock using your mouse pointer.
+
 # How it works
+
+Each indivdual agent is governed by three rules that determine their overall flight and direction.
+
+- Cohesion: Steer towards the average position of other boids
+- Seperation: Steer clear of other boids to avoid collisions.
+- Alignment: Steer towards the average direction of the boid.
 
 # List of classes/assets
 
 | Class/asset | Source |
 |-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
+| Attraction.cs | Self written |
+| Boid.cs | Self written |
+| BoidSpawner.cs | Self written |
+| LookAtAttraction.cs | Self written |
 
 # References
+
+Boids algorithm demonstration - https://eater.net/boids
+Coding Adventure: Boids - https://www.youtube.com/watch?v=bqtqltqcQhw
 
 # What I am most proud of in the assignment
 
 # Proposal
-The goal of this project is to give an immersive 2D woodland experience.I plan to
-try capture what it’s like to explore the woods. What this means technically is 
-that the user will be able to explore a procedurally generated grass and woodland,
-including the birds, mushrooms and random flora and fauna. 
+The goal of this project is to create an interesting simulation using procedural
+generation. Birds flocking can be awe inspiring but also intimidating at times
+due to the sheer size the can grow to. 
 
-I plan to take some inspiration from the likes of the old school Pokemon games
-suchas Red, Gold, and Ruby. As well as that I’ll also be drawing from Stardew 
-Valleyand its woodland parts of the town. Another game I similar to this feel
-would be Minecraft. The project will be built using the Unity Game Engine. 
+There are plenty of examples of flocking implemented in video games throughout
+the years from The Legend of Zelda, to Horizon Zero Dawn, to Uncharted. Bird
+Flocking is found under water when viewing fish. The same behaviour can be 
+observed. That's why I want to try implement this behaviour. The possiblities
+and use cases are endless.   
