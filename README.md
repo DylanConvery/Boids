@@ -1,4 +1,4 @@
-# Procedural-Generation-Demo
+# Boids
 
 Name: Dylan Convery
 
