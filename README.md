@@ -35,8 +35,8 @@ Each indivdual agent is governed by three rules that determine their overall fli
 
 # References
 
-Boids algorithm demonstration - https://eater.net/boids
-Coding Adventure: Boids - https://www.youtube.com/watch?v=bqtqltqcQhw
+- Boids algorithm demonstration - https://eater.net/boids
+- Coding Adventure: Boids - https://www.youtube.com/watch?v=bqtqltqcQhw
 
 # What I am most proud of in the assignment
 
