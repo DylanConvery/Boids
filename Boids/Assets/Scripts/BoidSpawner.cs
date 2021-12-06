@@ -5,6 +5,7 @@ public class BoidSpawner : MonoBehaviour
 {
     void Awake()
     {
+        spawner = this;
         SpawnBoids();
     }
 
@@ -27,9 +28,16 @@ public class BoidSpawner : MonoBehaviour
         m_boids.Add(boid);
     }
 
+    public static BoidSpawner spawner;
+
+    [SerializeField] private int m_boid_target_amount = 100;
+    private const float m_creation_delay = 0.1f;
+
+    public float boid_spawn_radius = 100f;
+    public float boid_velocity = 30f;
+
     [SerializeField] private GameObject m_boid_prefab = null;
     [SerializeField] private GameObject m_boid_anchor = null;
     private List<Boid> m_boids = new List<Boid>();
-    [SerializeField] private const int m_boid_target_amount = 10;
-    private const float m_creation_delay = 0.1f;
+
 }
