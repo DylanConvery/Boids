@@ -160,8 +160,8 @@ Camera:
   m_GameObject: {fileID: 287941780}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.120550014, g: 0.14997053, b: 0.1981132, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -178,7 +178,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 9.26
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -232,6 +232,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7449ee70157bbd74bb5c6b9dc1ef8783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_boid_target_amount: 20
+  boid_spawn_radius: 100
+  boid_velocity: 30
+  attract_push_distance: 5
+  attraction_pull: 2
   m_boid_prefab: {fileID: 6533836531069257050, guid: 0e015c82ed6c8e74da56f05fe1850a09, type: 3}
   m_boid_anchor: {fileID: 381975870}
 --- !u!1 &381975870
@@ -296,6 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9174d68884aca4cbbed1f1d4bbab46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_radius: 10
+  m_x_phase: 0.5
   m_y_phase: 0.4
   m_z_phase: 0.1
 --- !u!96 &1116512242
@@ -306,7 +313,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116512240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
