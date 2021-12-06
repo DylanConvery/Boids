@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Boid : MonoBehaviour
-{
-    private void Awake()
-    {
+public class Boid : MonoBehaviour {
+    private void Awake() {
         //TODO: decouple Boid and BoidSpawner logic
         //grab rigidbody now to avoid having to getcomponent everywhere we need to access our rigidbody
         m_rigid_body = GetComponent<Rigidbody>();
@@ -18,36 +14,30 @@ public class Boid : MonoBehaviour
         LookAhead();
     }
 
-    private void FixedUpdate()
-    {
-        Vector3 velocity = m_rigid_body.velocity;
+    private void FixedUpdate() {
+        var velocity = m_rigid_body.velocity;
         //get current distance from attraction to boid
-        Vector3 delta = m_attraction_transform.position - m_position;
+        var delta = m_attraction_transform.position - m_position;
 
         //check whether we need to move towards or away from the attraction
-        if (delta.magnitude > BoidSpawner.boid_spawner.attract_push_distance)
-        {
+        if (delta.magnitude > BoidSpawner.boid_spawner.attract_push_distance) {
             velocity = Vector3.Lerp(velocity, delta.normalized * BoidSpawner.boid_spawner.boid_velocity, BoidSpawner.boid_spawner.attraction_pull * Time.fixedDeltaTime);
-        }
-        else
-        {
+        } else {
             velocity = Vector3.Lerp(velocity, -delta.normalized * BoidSpawner.boid_spawner.boid_velocity, BoidSpawner.boid_spawner.attraction_pull * Time.fixedDeltaTime);
         }
+
         //normalize vector and set velocity
         m_rigid_body.velocity = velocity.normalized * BoidSpawner.boid_spawner.boid_velocity;
         LookAhead();
     }
 
     //set our rotation to be in the direction of our velocity
-    private void LookAhead()
-    {
-        transform.LookAt(m_position + m_rigid_body.velocity);
-    }
+    private void LookAhead() { transform.LookAt(m_position + m_rigid_body.velocity); }
 
     private Rigidbody m_rigid_body;
     private Transform m_attraction_transform;
-    private Vector3 m_position
-    {
+
+    private Vector3 m_position {
         get => transform.position;
         set => transform.position = value;
     }

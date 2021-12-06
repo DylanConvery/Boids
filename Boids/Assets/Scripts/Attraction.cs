@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class Attraction : MonoBehaviour
-{
-    private void FixedUpdate()
-    {
+public class Attraction : MonoBehaviour {
+    private void FixedUpdate() {
         //update transform position to use cyclic movement
         transform.position = new Vector3(
             Mathf.Sin(m_x_phase * Time.time) * m_radius * transform.localScale.x,
