@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoidSpawner : MonoBehaviour {
-    void Awake() {
+    private void Awake() {
         //set up singleton
         if (_instance != null && _instance != this) {
             Destroy(this.gameObject);
@@ -15,10 +15,9 @@ public class BoidSpawner : MonoBehaviour {
 
     // until desired amount of boids have been instantiated
     private void SpawnBoids() {
-        if (m_boids.Count < m_boid_target_amount) {
-            CreateBoid();
-            Invoke("SpawnBoids", m_creation_delay);
-        }
+        if (m_boids.Count >= m_boid_target_amount) return;
+        CreateBoid();
+        Invoke("SpawnBoids", m_creation_delay);
     }
 
     //instantiates a boid and adds it to m_boids list
@@ -42,13 +41,19 @@ public class BoidSpawner : MonoBehaviour {
     private const float m_creation_delay = 0.1f;
 
     //boid spawn values
-    public float boid_spawn_radius = 100f;
-    public float boid_velocity = 30f;
+    public float m_boid_spawn_radius = 100f;
+    public float m_boid_velocity = 30f;
 
-    public float boid_neighbour_distance = 30f;
+    public float m_boid_neighbour_distance = 30f;
+    public float m_boid_collider_distance = 4f;
+    public float m_boid_collider_avoid_distance = 2f;
+    public float m_boid_centering = 0.2f;
+    public float m_boid_velocity_matching = 0.25f;
 
-    public float attraction_push_distance = 5f;
-    public float attraction_pull = 2f;
+    public float m_attraction_push_distance = 5f;
+    public float m_attraction_pull = 2f;
+    public float m_attraction_push = 2f;
+
 
     [SerializeField] private GameObject m_boid_prefab = null;
     [SerializeField] private GameObject m_boid_anchor = null;

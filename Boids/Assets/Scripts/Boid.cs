@@ -8,9 +8,9 @@ public class Boid : MonoBehaviour {
         //grab our attractions transform now for later
         m_attraction_transform = GameObject.FindGameObjectWithTag("Attraction").transform;
         //set the spawn position randomly within a 1.0f radius sphere * our spawn radius
-        m_position = Random.insideUnitSphere * BoidSpawner.boid_spawner.boid_spawn_radius;
+        m_position = Random.insideUnitSphere * BoidSpawner.boid_spawner.m_boid_spawn_radius;
         //set the velocity of each boid to be random
-        m_rigid_body.velocity = Random.onUnitSphere * BoidSpawner.boid_spawner.boid_velocity;
+        m_rigid_body.velocity = Random.onUnitSphere * BoidSpawner.boid_spawner.m_boid_velocity;
         LookAhead();
     }
 
@@ -20,14 +20,14 @@ public class Boid : MonoBehaviour {
         var delta = m_attraction_transform.position - m_position;
 
         //check whether we need to move towards or away from the attraction
-        if (delta.magnitude > BoidSpawner.boid_spawner.attraction_push_distance) {
-            velocity = Vector3.Lerp(velocity, delta.normalized * BoidSpawner.boid_spawner.boid_velocity, BoidSpawner.boid_spawner.attraction_pull * Time.fixedDeltaTime);
+        if (delta.magnitude > BoidSpawner.boid_spawner.m_attraction_push_distance) {
+            velocity = Vector3.Lerp(velocity, delta.normalized * BoidSpawner.boid_spawner.m_boid_velocity, BoidSpawner.boid_spawner.m_attraction_pull * Time.fixedDeltaTime);
         } else {
-            velocity = Vector3.Lerp(velocity, -delta.normalized * BoidSpawner.boid_spawner.boid_velocity, BoidSpawner.boid_spawner.attraction_pull * Time.fixedDeltaTime);
+            velocity = Vector3.Lerp(velocity, -delta.normalized * BoidSpawner.boid_spawner.m_boid_velocity, BoidSpawner.boid_spawner.m_attraction_pull * Time.fixedDeltaTime);
         }
 
         //normalize vector and set velocity
-        m_rigid_body.velocity = velocity.normalized * BoidSpawner.boid_spawner.boid_velocity;
+        m_rigid_body.velocity = velocity.normalized * BoidSpawner.boid_spawner.m_boid_velocity;
         LookAhead();
     }
 
@@ -37,7 +37,9 @@ public class Boid : MonoBehaviour {
     private Rigidbody m_rigid_body;
     private Transform m_attraction_transform;
 
-    private Vector3 m_position {
+    public Vector3 m_rigidbody_velocity => m_rigid_body.velocity;
+
+    public Vector3 m_position {
         get => transform.position;
         set => transform.position = value;
     }
