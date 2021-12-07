@@ -20,7 +20,7 @@ public class Boid : MonoBehaviour {
         var delta = m_attraction_transform.position - m_position;
 
         //check whether we need to move towards or away from the attraction
-        if (delta.magnitude > BoidSpawner.boid_spawner.attract_push_distance) {
+        if (delta.magnitude > BoidSpawner.boid_spawner.attraction_push_distance) {
             velocity = Vector3.Lerp(velocity, delta.normalized * BoidSpawner.boid_spawner.boid_velocity, BoidSpawner.boid_spawner.attraction_pull * Time.fixedDeltaTime);
         } else {
             velocity = Vector3.Lerp(velocity, -delta.normalized * BoidSpawner.boid_spawner.boid_velocity, BoidSpawner.boid_spawner.attraction_pull * Time.fixedDeltaTime);

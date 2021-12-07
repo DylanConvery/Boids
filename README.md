@@ -6,7 +6,7 @@ Student Number: D14124700
 
 Class Group: DT228/TU856
 
-# Description of the project
+# Description
 
 This project will implemented a well known flocking simulation called Boids using the Unity Game 
 Engine and procedural generation. Boids or bird-oid objects, was first developed by Computer 
@@ -42,6 +42,7 @@ Each indivdual agent is governed by three rules that determine their overall fli
 # What I am most proud of in the assignment
 
 # Proposal
+
 The goal of this project is to create an interesting simulation using procedural
 generation. Birds flocking can be awe inspiring but also intimidating at times
 due to the sheer size they can grow to. 

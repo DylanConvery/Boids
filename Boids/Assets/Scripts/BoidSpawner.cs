@@ -44,7 +44,10 @@ public class BoidSpawner : MonoBehaviour {
     //boid spawn values
     public float boid_spawn_radius = 100f;
     public float boid_velocity = 30f;
-    public float attract_push_distance = 5f;
+
+    public float boid_neighbour_distance = 30f;
+
+    public float attraction_push_distance = 5f;
     public float attraction_pull = 2f;
 
     [SerializeField] private GameObject m_boid_prefab = null;
