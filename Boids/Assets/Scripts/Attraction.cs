@@ -11,7 +11,7 @@ public class Attraction : MonoBehaviour {
     }
 
     //serializable to change in the inspector. not const because of this.
-    [SerializeField] private float m_radius = 5f;
+    [SerializeField] private float m_radius = 10f;
     [SerializeField] private float m_x_phase = 0.5f;
     [SerializeField] private float m_y_phase = 0.4f;
     [SerializeField] private float m_z_phase = 0.1f;

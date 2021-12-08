@@ -177,7 +177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6523925095581358911
 Transform:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 3
+  m_Time: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -280,7 +280,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 1
-        value: 0.07746214
+        value: 0.1119369
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -339,7 +339,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7828201730396277712
 Rigidbody:
@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b54de383967b9c42bed80b3d93a1dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_attraction: {fileID: 0}
 --- !u!114 &-6965906842183637299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6870942688416541960
 Transform:
   m_ObjectHideFlags: 0
