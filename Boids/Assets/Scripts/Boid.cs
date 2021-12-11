@@ -11,10 +11,6 @@ public class Boid : MonoBehaviour {
         m_neighbourhood = GetComponent<Neighbourhood>();
         //grab our attractions transform now for later
         m_attraction = GameObject.FindGameObjectWithTag("track");
-        //set the spawn position randomly within a 1.0f radius sphere * our spawn radius
-        m_position = Random.insideUnitSphere * Spawner.m_boid_spawner.m_spawn_radius;
-        //set the velocity of each boid to be random
-        m_rigid_body.velocity = Random.onUnitSphere * Spawner.m_boid_spawner.m_velocity;
         LookAhead();
     }
 
@@ -97,7 +93,10 @@ public class Boid : MonoBehaviour {
     public GameObject m_attraction;
     private Neighbourhood m_neighbourhood;
 
-    public Vector3 m_velocity => m_rigid_body.velocity;
+    public Vector3 m_velocity {
+        get => m_rigid_body.velocity;
+        set => m_rigid_body.velocity = value;
+    }
 
     public Vector3 m_position {
         get => transform.position;

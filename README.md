@@ -41,6 +41,8 @@ Each indivdual agent is governed by three rules that determine their overall fli
 
 # What I am most proud of in the assignment
 
+Implementing this algorithm was challenging at the best of times.
+
 # Proposal
 
 The goal of this project is to create an interesting simulation using procedural

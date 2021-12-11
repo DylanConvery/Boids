@@ -24,7 +24,11 @@ public class Spawner : MonoBehaviour {
     private void CreateBoid() {
         var boid_gameobject = Instantiate(m_boid_prefab);
         var boid = boid_gameobject.GetComponent<Boid>();
-        boid.transform.SetParent(m_boid_anchor);
+        boid.transform.SetParent(this.transform);
+        //set the spawn position randomly within a 1.0f radius sphere * our spawn radius
+        boid.m_position = transform.position + Random.insideUnitSphere * Spawner.m_boid_spawner.m_spawn_radius;
+        //set the velocity of each boid to be random
+        boid.m_velocity = Random.onUnitSphere * Spawner.m_boid_spawner.m_velocity;
         m_boids.Add(boid);
     }
 
@@ -48,6 +52,5 @@ public class Spawner : MonoBehaviour {
     private const float m_creation_delay = 0.05f;
 
     public GameObject m_boid_prefab;
-    public Transform m_boid_anchor;
     private List<Boid> m_boids = new List<Boid>();
 }
