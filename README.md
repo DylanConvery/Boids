@@ -1,6 +1,6 @@
 # Boids
 
-![Boids Photo]()
+![Boids Photo](https://github.com/DylanConvery/Boids/blob/main/Boids/Assets/Images/Screenshot%202021-12-11%20001955.png?raw=true)
 
 Name: Dylan Convery
 
