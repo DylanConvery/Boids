@@ -37,7 +37,6 @@ Each indivdual agent is governed by three rules that determine their overall fli
 | Neighbourhood.cs | Self Written |
 | SimpleLowPolyNature | [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552#content)
 
-
 # References
 
 - Boids algorithm demonstration - https://eater.net/boids
