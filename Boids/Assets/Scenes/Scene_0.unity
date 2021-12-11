@@ -2632,7 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7449ee70157bbd74bb5c6b9dc1ef8783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_boid_target_amount: 400
+  m_boid_target_amount: 200
   m_spawn_radius: 3
   m_velocity: 6
   m_neighbour_distance: 4

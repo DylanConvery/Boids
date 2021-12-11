@@ -2,17 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-//TODO: remove spawner coupling
-
 public class Neighbourhood : MonoBehaviour {
-    private void Start() {
-        //grab SphereCollider now to avoid having to getcomponent everywhere we use it
-        m_neighbourhood = GetComponent<SphereCollider>();
-        //set radius of collider to be half the distance we want neighbouring 
-        //boids to be able to see each other via collider
-        m_neighbourhood.radius = Spawner.m_boid_spawner.m_neighbour_distance / 2;
-    }
-
     //check when GameObject enters collider
     private void OnTriggerEnter(Collider neighbour) {
         //get access to neighbouring boid
@@ -82,7 +72,7 @@ public class Neighbourhood : MonoBehaviour {
                 var delta = boid.m_position - transform.position;
                 //check if neighbouring boid position from our position is less than or equal to collision distance
                 //if it is, add to sum
-                if (delta.magnitude <= Spawner.m_boid_spawner.m_collision_distance) {
+                if (delta.magnitude <= m_collision_distance) {
                     average_close_position += boid.m_position;
                     near_count++;
                 }
@@ -100,4 +90,13 @@ public class Neighbourhood : MonoBehaviour {
 
     //collider that represents the neighbourhood
     private SphereCollider m_neighbourhood;
+
+    //boid flocking values
+    public float m_collision_distance = 4f;
+    public float m_velocity_matching = 0.25f;
+    public float m_centering = 0.2f;
+    public float m_collision_avoid_distance = 2f;
+    public float m_attraction_pull = 2f;
+    public float m_attraction_push = 2f;
+    public float m_attraction_push_distance = 5f;
 }

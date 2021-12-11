@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour {
         } else {
             _instance = this;
         }
-
+        //start spawning boids
         SpawnBoids();
     }
 
@@ -27,29 +27,19 @@ public class Spawner : MonoBehaviour {
         boid.transform.SetParent(this.transform);
         //set the spawn position randomly within a 1.0f radius sphere * our spawn radius
         boid.m_position = transform.position + Random.insideUnitSphere * Spawner.m_boid_spawner.m_spawn_radius;
-        //set the velocity of each boid to be random
-        boid.m_velocity = Random.onUnitSphere * Spawner.m_boid_spawner.m_velocity;
         m_boids.Add(boid);
     }
 
     //singleton
     private static Spawner _instance;
+
     //return singleton
     public static Spawner m_boid_spawner => _instance;
 
     //boid spawn values
     public int m_boid_target_amount = 100;
     public float m_spawn_radius = 100f;
-    public float m_velocity = 30f;
-    public float m_neighbour_distance = 30f;
-    public float m_collision_distance = 4f;
-    public float m_velocity_matching = 0.25f;
-    public float m_centering = 0.2f;
-    public float m_collision_avoid_distance = 2f;
-    public float m_attraction_pull = 2f;
-    public float m_attraction_push = 2f;
-    public float m_attraction_push_distance = 5f;
-    private const float m_creation_delay = 0.05f;
+    public float m_creation_delay = 0.05f;
 
     public GameObject m_boid_prefab;
     private List<Boid> m_boids = new List<Boid>();
