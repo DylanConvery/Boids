@@ -26,6 +26,10 @@ Each indivdual agent is governed by three rules that determine their overall fli
 - Seperation: Steer clear of other boids to avoid collisions.
 - Alignment: Steer towards the average direction of the boid.
 
+# YouTube Demo
+
+[![YouTube](https://www.youtube.com/watch?v=KNLtdoodDOw)
+
 # List of classes/assets
 
 | Class/asset | Source |
@@ -36,7 +40,6 @@ Each indivdual agent is governed by three rules that determine their overall fli
 | Navigation.cs | Self written |
 | Neighbourhood.cs | Self Written |
 | SimpleLowPolyNature | [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552#content)
-
 
 # References
 
