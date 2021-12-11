@@ -1,5 +1,7 @@
 # Boids
 
+![Boids Photo]()
+
 Name: Dylan Convery
 
 Student Number: D14124700
@@ -14,7 +16,7 @@ Scientist Craig Reynolds in 1986.
 
 # Instructions for use
 
-Steer the direction of the flock using your mouse pointer.
+The simulation starts itself. The flock follow a predetermined route. Sit back and enjoy.
 
 # How it works
 
@@ -30,18 +32,24 @@ Each indivdual agent is governed by three rules that determine their overall fli
 |-----------|-----------|
 | Attraction.cs | Self written |
 | Boid.cs | Self written |
-| BoidSpawner.cs | Self written |
-| LookAtAttraction.cs | Self written |
+| Spawner.cs | Self written |
+| Navigation.cs | Self written |
 | Neighbourhood.cs | Self Written |
+| SimpleLowPolyNature | [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552#content)
+
 
 # References
 
 - Boids algorithm demonstration - https://eater.net/boids
 - Coding Adventure: Boids - https://www.youtube.com/watch?v=bqtqltqcQhw
+- Modeling Nature Systems - https://cs.stanford.edu/people/eroberts/courses/soco/projects/2008-09/modeling-natural-systems/boids.html
+- Boids - https://www.red3d.com/cwr/boids/
 
 # What I am most proud of in the assignment
 
-Implementing this algorithm was challenging at the best of times.
+Implementing this algorithm was challenging at the best of times. I'm most proud
+that I managed to do it and for it to come out so well. I never realised the 
+potential it had until now. I'm now seeing boid simulations everywhere.
 
 # Proposal
 
