@@ -26,6 +26,10 @@ Each indivdual agent is governed by three rules that determine their overall fli
 - Seperation: Steer clear of other boids to avoid collisions.
 - Alignment: Steer towards the average direction of the boid.
 
+# YouTube Demo
+
+[![YouTube](https://i9.ytimg.com/vi/KNLtdoodDOw/mq3.jpg?sqp=CIzpz40G&rs=AOn4CLCxaYZz27b_k_uwfOQb3lKe3MAezA)](https://www.youtube.com/watch?v=KNLtdoodDOw)
+
 # List of classes/assets
 
 | Class/asset | Source |
