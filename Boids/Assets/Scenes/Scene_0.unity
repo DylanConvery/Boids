@@ -1940,6 +1940,7 @@ GameObject:
   - component: {fileID: 287941782}
   - component: {fileID: 287941781}
   - component: {fileID: 287941784}
+  - component: {fileID: 287941785}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2108,6 +2109,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &287941785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287941780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ee34b16ffddd64e9b086cd4600cee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_game_object: {fileID: 1116512240}
 --- !u!4 &293992349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3759753885466923116, guid: 430aea17f65ddba419bf9f426b17128f, type: 3}
@@ -2632,17 +2646,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7449ee70157bbd74bb5c6b9dc1ef8783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_boid_target_amount: 200
-  m_spawn_radius: 3
-  m_velocity: 6
-  m_neighbour_distance: 4
-  m_collision_distance: 1
-  m_velocity_matching: 10
-  m_centering: 0.2
-  m_collision_avoid_distance: 1
-  m_attraction_pull: 3
-  m_attraction_push: 2
-  m_attraction_push_distance: 1
+  m_boid_target_amount: 70
+  m_spawn_radius: 5
+  m_creation_delay: 0.02
   m_boid_prefab: {fileID: 6533836531069257050, guid: 0e015c82ed6c8e74da56f05fe1850a09, type: 3}
 --- !u!4 &394795228 stripped
 Transform:
@@ -7283,7 +7289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116512240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.8, y: 9.45, z: -7.68}
+  m_LocalPosition: {x: 7.8, y: 12.46, z: -7.68}
   m_LocalScale: {x: 4, y: 0.1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}

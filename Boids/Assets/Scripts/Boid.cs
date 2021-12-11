@@ -11,6 +11,8 @@ public class Boid : MonoBehaviour {
         m_neighbourhood = GetComponent<Neighbourhood>();
         //grab our attractions transform now for later
         m_attraction = GameObject.FindGameObjectWithTag("track");
+        GetComponent<Animator>().runtimeAnimatorController = m_animation_controller;
+
         LookAhead();
     }
 
@@ -93,7 +95,8 @@ public class Boid : MonoBehaviour {
     public float m_speed = 30f;
 
     private Rigidbody m_rigid_body;
-    public GameObject m_attraction;
+    private GameObject m_attraction;
+    public RuntimeAnimatorController m_animation_controller;
     private Neighbourhood m_neighbourhood;
 
     public Vector3 m_velocity {
